@@ -1,0 +1,258 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    position: relative;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px grey;
+    transition: box-shadow 0.5s;
+    -webkit-transition: box-shadow 0.5s;
+}
+
+.card:hover {
+    box-shadow: 0 0 15px 5px grey;
+}
+
+.card1,
+.card2 {
+    width: 250px;
+    height: 200px;
+}
+
+.card2,
+.card3 {
+    color: #fff;
+}
+
+.card2 > a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(0, 0, 0, 0.7)
+    );
+}
+
+.card3 {
+    width: 520px;
+    height: 320px;
+    background-image: linear-gradient(
+            to bottom,
+            rgba(51, 102, 255, 0.4),
+            rgba(10, 0, 26, 0.8)
+        ),
+        url(../img/bg-3.png);
+    background-size: cover;
+}
+
+.card1__img,
+.card2__img {
+    display: block;
+    min-width: 100%;
+    margin: 0 auto;
+    border-radius: 8px 8px 0 0;
+}
+
+.card1__img {
+    height: 70%;
+}
+
+.card2__img {
+    height: 100%;
+}
+
+.card1__tag,
+.card2__tag,
+.card3__tag {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    z-index: 2;
+    padding: 2px 12px;
+    color: #fff;
+    font-size: 10px;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+.card1__tag {
+    background-color: #007fff;
+}
+
+.card2__tag {
+    background-color: #ff4000;
+}
+
+.card3__tag {
+    color: #000;
+    background-color: #fff;
+    transition: color 0.5s;
+    -webkit-transition: color 0.5s;
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+}
+
+.card3:hover .card3__tag {
+    color: #fff;
+    background-color: #ff4000;
+}
+
+.card1__caption,
+.card2__caption,
+.card3__caption {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    padding: 10px 20px;
+    width: 100%;
+    height: 30%;
+    color: inherit;
+    line-height: 1em;
+}
+
+.card2__caption {
+    bottom: 10px;
+}
+
+.card3__caption {
+    bottom: 40px;
+    height: auto;
+    padding: 0 25px;
+    border-left-width: 3px;
+    border-left: 4px inset turquoise;
+    transition: bottom 0.5s;
+    -webkit-transition: bottom 0.5s;
+}
+
+.card3:hover .card3__caption {
+    bottom: -50px;
+}
+
+.card3__date {
+    margin-top: 0;
+    color: turquoise;
+    font-size: 12px;
+}
+
+.card1__title,
+.card2__title,
+.card3__title {
+    margin: 0;
+    font-size: 14px;
+}
+
+.card3__title {
+    font-size: 20px;
+}
+
+.card3__title--in-box {
+    font-size: 16px;
+}
+
+.card1__text,
+.card2__text,
+.card3__text {
+    margin: 5px 0;
+    font-size: 10px;
+}
+
+.card3__text {
+    color: slategrey;
+    font-size: 12px;
+}
+
+.icon {
+    position: absolute;
+    z-index: 2;
+    opacity: 0.8;
+}
+
+.icon:hover {
+    opacity: 1;
+}
+
+.card1__heart,
+.card2__more {
+    right: 15px;
+    bottom: 15px;
+}
+
+.card2__play {
+    left: calc(50% - 15px);
+    top: calc(50% - 15px);
+    width: 30px;
+    height: 30px;
+}
+
+.card2__more {
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: inherit;
+}
+
+.card3__view-trip {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    width: 90px;
+    border-radius: 15px;
+    padding: 8px;
+    background-image: linear-gradient(
+        to right,
+        rgba(71, 71, 209, 1),
+        rgba(0, 102, 255, 1)
+    );
+    text-align: center;
+    font-size: 12px;
+}
+
+.card3:hover .card3__view-trip {
+    background-image: none;
+    color: rgba(0, 102, 255, 1);
+}
+
+.card3__side-box {
+    position: absolute;
+    left: 520px;
+    height: 100%;
+    width: 370px;
+    padding: 50px 15px;
+    background-color: #fff;
+    color: #000;
+    transition: left 0.5s;
+    -webkit-transition: left 0.5s;
+}
+
+.card3:hover .card3__side-box {
+    left: 150px;
+}
