@@ -75,7 +75,7 @@ html {
   padding-left: 0;
 }
 
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .wrapper--medium, .wrapper--medium-vertical, .wrapper--large, .col,
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .wrapper--medium, .wrapper--vertical, .wrapper--large, .col,
 .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
 .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
 .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
@@ -223,7 +223,7 @@ html {
   max-width: 91.66667%;
 }
 
-.col-12, .wrapper--medium, .wrapper--medium-vertical, .wrapper--large {
+.col-12, .wrapper--medium, .wrapper--vertical, .wrapper--large {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
@@ -446,7 +446,7 @@ html {
             flex: 0 0 41.66667%;
     max-width: 41.66667%;
   }
-  .col-sm-6, .wrapper--medium, .wrapper--medium-vertical {
+  .col-sm-6, .wrapper--medium, .wrapper--vertical {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
@@ -902,7 +902,7 @@ html {
             flex: 0 0 16.66667%;
     max-width: 16.66667%;
   }
-  .col-lg-3, .wrapper--medium, .wrapper--medium-vertical {
+  .col-lg-3, .wrapper--medium, .wrapper--vertical {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 25%;
             flex: 0 0 25%;
@@ -4202,7 +4202,7 @@ a {
   padding: 10px;
 }
 
-.wrapper--medium-vertical {
+.wrapper--vertical {
   height: 300px;
   padding: 10px;
 }
@@ -4459,8 +4459,8 @@ a {
 }
 
 .side-slide {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(51, 102, 255, 0.4)), to(rgba(10, 0, 26, 0.8))), url(../../img/venice.png);
-  background-image: linear-gradient(to bottom, rgba(51, 102, 255, 0.4), rgba(10, 0, 26, 0.8)), url(../../img/venice.png);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(51, 102, 255, 0.4)), to(rgba(10, 0, 26, 0.8))), url("/img/venice.png");
+  background-image: linear-gradient(180deg, rgba(51, 102, 255, 0.4), rgba(10, 0, 26, 0.8)), url("/img/venice.png");
   background-size: cover;
   color: #fff;
 }
@@ -4540,6 +4540,49 @@ a {
 .side-slide:hover .side-slide__slide-box {
   -webkit-transform: translate(-100%, 0);
           transform: translate(-100%, 0);
+}
+
+.card-colosseum {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.5))), url("/img/colosseum.png");
+  background-image: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.5)), url("/img/colosseum.png");
+  background-size: cover;
+  color: #fff;
+}
+
+.card-colosseum:hover {
+  cursor: pointer;
+}
+
+.card-colosseum .tag {
+  right: auto;
+  left: 20px;
+}
+
+.card-colosseum__caption {
+  position: absolute;
+  bottom: 15px;
+  z-index: 2;
+  padding: 0px 20px;
+}
+
+.card-colosseum__title {
+  margin: 0;
+  font-size: 14px;
+}
+
+.card-colosseum__text {
+  margin: 5px 0;
+  font-size: 10px;
+}
+
+.card-colosseum__more {
+  right: 15px;
+  top: 15px;
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: inherit;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 .tag {
